@@ -19,6 +19,9 @@
 /* Sizes */
 #define SIZE_LONG 2
 #define SIZE_SHORT 1
+void write_unsigned(unsigned long int num);
+void write_pointer(void* ptr);
+void handle_write_character(char c);
 
 /* Format struct and associated function */
 typedef struct format

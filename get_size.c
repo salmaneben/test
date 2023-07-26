@@ -51,4 +51,15 @@ int print_rot13(va_list types, char buffer[], int flags, int width, int precisio
     /* Your implementation goes here*/
     return 0;
 }
+void write_unsigned(unsigned long int num) {
+    // Your implementation goes here
+}
+
+void write_pointer(void* ptr) {
+    // Your implementation goes here
+}
+
+void handle_write_character(char c) {
+    // Your implementation goes here
+}
 
