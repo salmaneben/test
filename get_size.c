@@ -26,16 +26,28 @@ int get_size(const char *format, int *index)
 }
 
 unsigned long int convert_size_unsigned(unsigned long int num, int size) {
-    /* Your implementation goes here*/
+    (void)size;  /* This line tells the compiler that size is intentionally unused*/
     return num;
 }
 
 int print_character(va_list types, char buffer[], int flags, int width, int precision, int size) {
+    (void)types;
+    (void)buffer;
+    (void)flags;
+    (void)width;
+    (void)precision;
+    (void)size;
     /* Your implementation goes here*/
     return 0;
 }
 
 int print_rot13(va_list types, char buffer[], int flags, int width, int precision, int size) {
+    (void)types;
+    (void)buffer;
+    (void)flags;
+    (void)width;
+    (void)precision;
+    (void)size;
     /* Your implementation goes here*/
     return 0;
 }
