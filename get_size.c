@@ -1,65 +1,28 @@
 #include "main.h"
 
+/* Function to calculate the size to cast the argument */
 /**
- * get_size - Calculates the size to cast the argument
- * @format: Formatted string in which to print the arguments
+ * get_size - Determines the size to cast the argument
+ * @format_string: Formatted string in which to print the arguments
  * @index: Pointer to the current index in the format string
  *
- * Return: Size to cast the argument.
+ * Return: Size.
  */
-int get_size(const char *format, int *index)
+int get_size(const char *format_string, int *index)
 {
-        int current_index = *index + 1; /* Renamed 'curr_i' to 'current_index'*/
-        int size = 0;
+	int current_index = *index + 1;
+	int size = 0;
 
-        if (format[current_index] == 'l')
-                size = SIZE_LONG;
-        else if (format[current_index] == 'h')
-                size = SIZE_SHORT;
+	if (format_string[current_index] == 'l')
+		size = SIZE_LONG;
+	else if (format_string[current_index] == 'h')
+		size = SIZE_SHORT;
 
-        if (size == 0)
-                *index = current_index - 1;
-        else
-                *index = current_index;
+	if (size == 0)
+		*index = current_index - 1;
+	else
+		*index = current_index;
 
-        return (size);
-}
-
-unsigned long int convert_size_unsigned(unsigned long int num, int size) {
-    (void)size;  /* This line tells the compiler that size is intentionally unused*/
-    return num;
-}
-
-int print_character(va_list types, char buffer[], int flags, int width, int precision, int size) {
-    (void)types;
-    (void)buffer;
-    (void)flags;
-    (void)width;
-    (void)precision;
-    (void)size;
-    /* Your implementation goes here*/
-    return 0;
-}
-
-int print_rot13(va_list types, char buffer[], int flags, int width, int precision, int size) {
-    (void)types;
-    (void)buffer;
-    (void)flags;
-    (void)width;
-    (void)precision;
-    (void)size;
-    /* Your implementation goes here*/
-    return 0;
-}
-void write_unsigned(unsigned long int num) {
-    // Your implementation goes here
-}
-
-void write_pointer(void* ptr) {
-    // Your implementation goes here
-}
-
-void handle_write_character(char c) {
-    // Your implementation goes here
+	return (size);
 }
 
